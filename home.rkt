@@ -6,11 +6,9 @@
   website/bootstrap
   "./widgets/big-fancy-quote.rkt"
   "./common.rkt"  
-  "./posts.rkt")
+  "./posts.rkt"
+  "./post-card.rkt")
 
-(require 
-  (only-in 2htdp/image scale)
-  (prefix-in book-spine: book-spines))
 
 (define (home)
   (my-content
@@ -38,42 +36,11 @@
 
     (row
       (col-4
-        (card 
-          (write-img
-
-            style: (properties width: "30px"
-                               vertical-align: "left")
-            (scale 0.25
-                   (book-spine:with-text "Lost Library"
-                                         (book-spine:red-spine))))
-
-          (p 
-            (ipsum 10))  
-
-          (img 
-            style: (properties 
-                     float: "left"
-                     width: "100px"
-                     margin: "5px")
-            src: (picsum 50 50))))
-
+        (post-card (lost-library)))
       (col-4
-        (card 
-          (card-img-top)
-          (card-body
-            (card-title "HI")
-            (card-text
-              (ipsum 10))
-            (button-secondary "Secondary"))))
+        (post-card (story/meta-story)))
       (col-4
-        (card 
-          (card-img-top)
-          (card-body
-            (card-title "HI")
-            (card-text
-              (ipsum 10))
-            (button-success "Success"))))
-      )))
+        (post-card (teacher-thanks))))))
 
 
 

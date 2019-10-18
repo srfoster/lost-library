@@ -23,7 +23,10 @@
     my-nav 
     (container
       (h1 title)
-      stuff)
+      (div id: "main"
+        stuff)
+      
+      )
     (footer style: (properties text-align: "center")
             
             (hr)

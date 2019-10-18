@@ -7,9 +7,7 @@
 
 (require website/bootstrap
          "./common.rkt"
-         (prefix-in teacher-thanks:
-                    "./posts/teacher-thanks.rkt") 
-         (prefix-in story/meta-story:
+         (prefix-in story-meta-story:
                     "./posts/story-meta-story.rkt") 
          (prefix-in lost-library:
                     "./posts/lost-library.rkt"))
@@ -31,7 +29,8 @@
   (page posts/teacher-thanks.html
         (my-content
           "Teacher Thank You"
-          teacher-thanks:content)))
+          (p "teachers are cool thanks yall")
+          )))
 
 (define posts
   (list
