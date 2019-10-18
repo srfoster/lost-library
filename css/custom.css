@@ -1,0 +1,62 @@
+body{
+  font-size: 1rem; 
+}
+
+blockquote.fancy:before {
+  content: open-quote;
+  display: inline;
+  height: 0;
+  line-height: 0;
+  left: -10px;
+  position: relative;
+  top: 30px;
+  color: #ccc;
+  font-size: 3em;
+}
+
+p.quotation{
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+blockquote.fancy{
+  font-size: 30px;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: .5em 10px;
+  padding: 0 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+  line-height: 1.4;
+}
+
+.quote-footer{
+  margin:0;
+  text-align: right;
+  font-size: 1em;
+  font-style: italic;
+}
+
+h1{
+  width: 100%;
+}
+
+
+article .container p{
+  font-size: 1.5em;
+}
+
+article .container p img{
+  float: left;
+}
+
+article.index p img{
+  float: left;
+  width: 70px;
+  margin: 5px !important;
+}
+
+
+ul{
+  overflow: hidden;
+}
