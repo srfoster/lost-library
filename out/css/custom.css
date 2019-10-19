@@ -61,3 +61,13 @@ ul{
   overflow: hidden;
 }
 
+.preview-image{
+  float: left;
+  margin: 10px;
+}
+
+.card .preview-image{
+  width: 50px;
+  margin: 2px;
+}
+
