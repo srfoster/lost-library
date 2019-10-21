@@ -26,17 +26,8 @@
 
 
 
-@(define (centered . content)
-   (div style: (properties text-align: "center")
-        content))
-
-
 @paras{
-@(write-image 
-   class: "preview-image"
-   style: (properties 
-            float: "left"
-            margin: "10px")
+@(preview-img
    (map-pict 300 300
              #:position
              #(20.930148 10.0)
