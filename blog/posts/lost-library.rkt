@@ -40,8 +40,7 @@
                riyadh
                atlantic1
                lafayette)))
-
-My father had two unspoken rules about his books: 1 every time you go to a bookstore, you must leave with at least one book; and 2) you must never, ever get rid of books. His collection had begun before I was born and was growing until just weeks before he passed away when I was 32. To give you an idea of just how seriously ... 
+My father had two unspoken rules about his books: 1) every time you go to a bookstore, you must leave with at least one book; and 2) you must never, ever get rid of books. His collection had begun before I was born and was growing until just weeks before he passed away when I was 32. To give you an idea of just how seriously ... 
 
 ...my father took his second rule:
 
@@ -59,7 +58,7 @@ The moment he died, this organizational system for his mind became nothing more 
   @b{We might have kept that library if things had been different.}
 }
 
-But the company that had employed him for over a decade failed to execute on his life insurance policy, sparking a legal battle that my mother is, years later, still fighting.  She was not able to be solely responsible for the mortage on what was supposed to be their retirement home in Montana.  In a different world, those books that had traveled the world together might still be all in one place.
+But the company that had employed him for over a decade failed to execute on his life insurance policy, sparking a legal battle that my mother is, years later, still fighting.  She was not able to be solely responsible for the mortage on what was supposed to be their retirement home in Montana.  In a different universe, those books that had traveled the world together might still be all in one place.
 
 Instead, she spent months selling the collection -- carting books by the boxload to Goodwills and listing them on Ebay.  At a few cents per item, the entire collection totalled to perhaps a few hundred dollars.  Selling them wasn't just about money, though.  In retrospect, it seemed somehow fitting for her to scatter them to the wind -- like ashes.  
 
