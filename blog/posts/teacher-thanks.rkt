@@ -17,49 +17,54 @@ As a teacher, I find myself eternally grateful to my own teachers.  This post is
 
 I must exclude (for now) some of my most influential teachers.  I can only express gratitude if I can put what you taught me into words. 
 
-@(post-card (page 
-              thank-yous/matt-willis.html
-              (my-content
-                "Matt Willis"
-                 matt:content)))
 
-@bold{Marlena Feco}
+@(div style: 
+      (properties clear: "both"))
 
-@(post-card (page 
-              thank-yous/marlena-feco.html
-              (my-content
-                "Marlena Feco"
-                 marlena:content)))
+TODO...
 
-@bold{Kelly Eakin}
+@(row
+   (col-4
+     (post-card (page 
+                  thank-yous/matt-willis.html
+                  (my-content
+                    "Matt Willis"
+                    matt:content))))
 
-@(post-card (page 
-              thank-yous/kelly-eakin.html
-              (my-content
-                "Kelly Eakin"
-                 kelly:content)))
+   (col-4
+     (post-card (page 
+                  thank-yous/marlena-feco.html
+                  (my-content
+                    "Marlena Feco"
+                    marlena:content))))
 
-@bold{Grace Manning}
+   (col-4
+     (post-card (page 
+                  thank-yous/kelly-eakin.html
+                  (my-content
+                    "Kelly Eakin"
+                    kelly:content)))))
 
-@(post-card (page 
-              thank-yous/grace-manning.html
-              (my-content
-                "Grace Manning"
-                 grace:content)))
 
-@bold{Michael Landry}
+  @(row
+     (col-4
+       (post-card (page 
+                    thank-yous/grace-manning.html
+                    (my-content
+                      "Grace Manning"
+                      grace:content))))
 
-@(post-card (page 
-              thank-yous/michael-landry.html
-              (my-content
-                "Michael Landry"
-                 michael:content)))
+     (col-4
+       (post-card (page 
+                    thank-yous/michael-landry.html
+                    (my-content
+                      "Michael Landry"
+                      michael:content))))
 
-@bold{Nahla Beyer}
-
-@(post-card (page 
-              thank-yous/nahla-beyer.html
-              (my-content
-                "Nahla Beyer"
-                 nahla:content)))
+     (col-4
+       (post-card (page 
+                    thank-yous/nahla-beyer.html
+                    (my-content
+                      "Nahla Beyer"
+                      nahla:content)))))
 }

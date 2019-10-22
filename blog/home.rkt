@@ -8,7 +8,7 @@
 
 
 (define (home)
-  (my-content
+  (home-content
     "Welcome"
     @big-fancy-quote{
        @list{
@@ -37,7 +37,11 @@
       (col-4
         (post-card (story/meta-story)))
       (col-4
-        (post-card (teacher-thanks))))))
+        (post-card (teacher-thanks))))
+    
+    (row
+      (col-4
+        (post-card (lang-website))))))
 
 
 

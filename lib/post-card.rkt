@@ -40,7 +40,9 @@
 
   (if main
     (take (filter-not 
-            (query br)
+            (or/c 
+              (query h1)
+              (query br))
             (element->contents main)) 2)
     "NO PREVIEW") 
   )
@@ -54,7 +56,8 @@
 
   (card 
     (card-body
-      (card-title title)
+      (card-title 
+        (link-to post title))
       (card-subtitle "1-minute read")
       (p 
         (write-image

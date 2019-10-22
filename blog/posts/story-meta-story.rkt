@@ -13,6 +13,9 @@
 Consider learning that an ancient tome you found in a used bookstore was written as its author slowly went insane.  
 Knowing this would change the experience of reading that book!  I, for one, would like to know such @bold{meta-stories} up front.  Some might prefer to learn it afterward.  But I think we can all agree that knowing the @bold{meta-stories} at @emph{some} point generally enhances the reading experience.
 
+
+@(div style: (properties clear: "both"))
+
 Examples of how important @bold{meta-stories} are need not be as dramatic as a writer going insane.  Something as simple as knowing if a story is true or false is a huge part of the reading experience.  A false story whose @bold{meta-story} claims it to be true is a lie -- which bothers most people.  As it should.
 
 For me, the most important @bold{meta-story} is:  

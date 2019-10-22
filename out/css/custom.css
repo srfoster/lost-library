@@ -2,6 +2,11 @@ body{
   font-size: 1rem; 
 }
 
+#main{
+  width: 70%;
+  margin: auto;
+}
+
 blockquote.fancy:before {
   content: open-quote;
   display: inline;
@@ -69,5 +74,9 @@ ul{
 .card .preview-image{
   width: 50px;
   margin: 2px;
+}
+
+.card{
+  margin-bottom: 10px;
 }
 

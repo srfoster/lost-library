@@ -44,6 +44,8 @@ My father had two unspoken rules about his books: 1) every time you go to a book
 
 ...my father took his second rule:
 
+@(div style: (properties clear: "both"))
+
 My family moved from Louisiana to Saudi Arabia in 1988, and those books followed us across the Atlantic -- 7,000 miles there, and 7,000 miles back -- thousands more books on the return trip 12 years later.  They followed us through a half dozen houses.  A few years here, a few years there. 
 
 @centered{

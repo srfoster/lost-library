@@ -1,6 +1,7 @@
 #lang racket
 
 (provide posts
+         lang-website
          lost-library
          story/meta-story
          teacher-thanks)
@@ -11,7 +12,16 @@
          (prefix-in story/meta-story:
                     "./posts/story-meta-story.rkt") 
          (prefix-in lost-library:
-                    "./posts/lost-library.rkt"))
+                    "./posts/lost-library.rkt")
+         (prefix-in lang-website:
+                    "./posts/lang-website.rkt") 
+         )
+
+(define (lang-website)
+  (page posts/lang-website.html
+        (my-content
+          "#lang website"
+          lang-website:content)))
 
 (define (lost-library)
   (page posts/lost-library.html
@@ -36,7 +46,8 @@
   (list
     (lost-library)
     (story/meta-story)
-    (teacher-thanks)))
+    (teacher-thanks)
+    (lang-website)))
 
 
 
