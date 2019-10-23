@@ -12,3 +12,11 @@
 (require "./typesetting.rkt")
 (require "./post-card.rkt")
 (require website/bootstrap)
+
+(provide define/provide)
+(define-syntax-rule (define/provide (f-name stuff ...)
+  body ...)
+
+  (begin (provide f-name)
+         (define (f-name stuff ...)
+           body ...)))

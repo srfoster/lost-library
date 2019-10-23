@@ -15,7 +15,7 @@
                     "./posts/lost-library.rkt")
          (prefix-in lang-website:
                     "./posts/lang-website.rkt") 
-         )
+         "./posts/thank-yous/main.rkt")
 
 (define (lang-website)
   (page posts/lang-website.html
@@ -47,7 +47,8 @@
     (lost-library)
     (story/meta-story)
     (teacher-thanks)
-    (lang-website)))
+    (lang-website)
+    (thank-yous)))
 
 
 

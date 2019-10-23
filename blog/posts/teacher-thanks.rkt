@@ -1,12 +1,7 @@
 #lang at-exp lost-library/post
 
 @(require 
-   (prefix-in matt:    "./thank-yous/matt-willis.rkt")
-   (prefix-in marlena: "./thank-yous/marlena-feco.rkt")
-   (prefix-in kelly:   "./thank-yous/kelly-eakin.rkt")
-   (prefix-in grace:   "./thank-yous/grace-manning.rkt")
-   (prefix-in michael: "./thank-yous/michael-landry.rkt")
-   (prefix-in nahla:   "./thank-yous/nahla-beyer.rkt")
+   "./thank-yous/main.rkt"
    2htdp/image)
 
 @paras{
@@ -21,50 +16,27 @@ I must exclude (for now) some of my most influential teachers.  I can only expre
 @(div style: 
       (properties clear: "both"))
 
-TODO...
 
 @(row
    (col-4
-     (post-card (page 
-                  thank-yous/matt-willis.html
-                  (my-content
-                    "Matt Willis"
-                    matt:content))))
+     (post-card 
+       (thank-you/matt-willis)))
 
    (col-4
-     (post-card (page 
-                  thank-yous/marlena-feco.html
-                  (my-content
-                    "Marlena Feco"
-                    marlena:content))))
+     (post-card 
+       (thank-you/marlena-feco)))
 
    (col-4
-     (post-card (page 
-                  thank-yous/kelly-eakin.html
-                  (my-content
-                    "Kelly Eakin"
-                    kelly:content)))))
+     (post-card 
+       (thank-you/kelly-eakin))))
 
 
   @(row
      (col-4
-       (post-card (page 
-                    thank-yous/grace-manning.html
-                    (my-content
-                      "Grace Manning"
-                      grace:content))))
+       (post-card 
+         (thank-you/grace-manning)))
 
      (col-4
-       (post-card (page 
-                    thank-yous/michael-landry.html
-                    (my-content
-                      "Michael Landry"
-                      michael:content))))
-
-     (col-4
-       (post-card (page 
-                    thank-yous/nahla-beyer.html
-                    (my-content
-                      "Nahla Beyer"
-                      nahla:content)))))
+       (post-card 
+          (thank-you/michael-landry))))
 }
