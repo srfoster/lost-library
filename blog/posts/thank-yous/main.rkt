@@ -4,7 +4,7 @@
 
 (require 
    (prefix-in matt:    "./matt-willis.rkt")
-   (prefix-in marlena: "./marlena-feco.rkt")
+   (prefix-in marlena: "./marlena-fecho.rkt")
    (prefix-in kelly:   "./kelly-eakin.rkt")
    (prefix-in grace:   "./grace-manning.rkt")
    (prefix-in michael: "./michael-landry.rkt")
@@ -15,9 +15,9 @@
           (my-content "Matt Willis"
              matt:content)))
 
-(define/provide (thank-you/marlena-feco)
-    (page thank-you/marlena-feco.rkt
-          (my-content "Marlena Feco"
+(define/provide (thank-you/marlena-fecho)
+    (page thank-you/marlena-fecho.rkt
+          (my-content "Marlena Fecho"
              marlena:content)))
 
 (define/provide (thank-you/kelly-eakin)
@@ -39,7 +39,7 @@
 (define/provide (thank-yous)
   (list
     (thank-you/matt-willis)
-    (thank-you/marlena-feco)
+    (thank-you/marlena-fecho)
     (thank-you/kelly-eakin)
     (thank-you/grace-manning)
     (thank-you/michael-landry)))
