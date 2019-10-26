@@ -1,0 +1,16 @@
+<html><head><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css" /><link rel="stylesheet" type="text/css" href="/css/custom.css" /><link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" /></head><body><nav class="navbar navbar-expand-md navbar-dark bg-dark"><div class="container"><a href="/index.html" class="navbar-brand">Stephen R. Foster</a><ul class="navbar-nav mr-auto"><li class="nav-item"><li class="nav-item"><a class="nav-link" href="/about.html">About</a></li></li></ul></div></nav><div class="container"><div id="main"><h1>#lang website</h1><br />  To say the things I wanted to say with this website, I created some technology in the form of a package called <code>website</code>, which is...<br /><br />  ...a language for making websites.<br /><br /> <pre><code>#lang racket
+(require website/bootstrap)
+
+(define site
+  (list
+    (page index.html
+          (h1 &quot;Hello World&quot;))))
+
+(render site #:to &quot;out&quot;)</code></pre><br /><br /> Bootstrap's visual vocabulary is supported.  For example:<br /><br /> <pre><code>(button-primary &quot;I'm a button&quot;)</code></pre><br /> Gives:<br /> <button type="button" class="btn btn-primary">I'm a button</button><br /><br /><br /> <pre><code>(card
+  (card-img-top)
+  (card-body
+    (card-title &quot;I am a card&quot;)
+    (card-subtitle &quot;with a subtitle&quot;)
+    (card-text &quot;Lorem ipsum ....&quot;)
+    (button-primary
+      &quot;Learn More&quot;)))</code></pre><br />Gives:<br /><div style="width:300px;height:500px;"><div class="card"><img class="card-img-top" src="https://picsum.photos/300/300?grayscale&amp;random=629" /><div class="card-body"><h5 class="card-title">I am a card</h5><h6 class="card-subtitle mb-2 text-muted">with a subtitle</h6><p class="card-text">Lorem ipsum ....</p><button type="button" class="btn btn-primary">Learn More</button></div></div></div></div></div><footer style="text-align:center;"><hr /><p><em>Stephen R. Foster 2019</em></p></footer><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="/js/jquery-3.2.1.slim.min.js"></script><script src="/js/bootstrap.bundle.min.js"></script></body></html>

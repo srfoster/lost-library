@@ -8,24 +8,27 @@
          teacher-thanks)
 
 (require "../lib/main.rkt"
-         "./posts/thank-yous/main.rkt")
+         (except-in "./posts/thank-yous.rkt" content))
+
+(require racket/runtime-path)
+(define-runtime-path posts-dir "./posts")
 
 (define (lang-website)
-  (file->page "#lang website"
-              "./posts/lang-website.rkt"))
+  (file->page #:name "#lang website"
+              (build-path posts-dir "lang-website.rkt")))
 
 (define (lost-library)
-  (file->page "./posts/lost-library.rkt"))
+  (file->page (build-path posts-dir "lost-library.rkt")))
 
 (define (story/meta-story)
-  (file->page "Story/Meta-Story"
-              "./posts/story-meta-story.rkt"))
+  (file->page #:name "Story/Meta-Story"
+              (build-path posts-dir "story-meta-story.rkt")))
 
 (define (teacher-thanks)
-  (file->page "./posts/teacher-thanks.rkt"))
+  (file->page (build-path posts-dir "thank-yous.rkt")))
 
 (define (definitions-top)
-  (file->page "./posts/definitions.rkt"))
+  (file->page (build-path posts-dir "definitions.rkt")))
 
 (define top-posts
   (list

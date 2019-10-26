@@ -26,15 +26,26 @@
 
 
 
-(provide file->page 
+(provide directory->pages
+         file->page 
          file->child-pages
          file-name->post-name)
 
 (require syntax/parse/define
    (for-syntax racket/syntax syntax/strip-context))
 
-(define (file-name->post-name name)
- (define last-bit (last (string-split name "/")))
+(define (directory->pages dir)
+  (define (is-rkt? p)
+    (string-suffix? 
+     (~a (last (explode-path p)))
+     ".rkt"))
+
+  (map file->page
+   (find-files is-rkt? dir)))
+
+(define (file-name->post-name path)
+ (define last-bit 
+  (~a (last (explode-path path))))
  (string-titlecase 
   (string-replace
    (string-replace 
@@ -42,19 +53,15 @@
     "-" " ")
 #px"[./]" "")))
 
-(define-syntax-parser file->page
-  [(_ name file)
-   (replace-context this-syntax 
-    #'(page (list (string-replace file "rkt" "html"))
-      (my-content name 
-        (let ()
-          (local-require (only-in file content))
-          content))))]
-  [(_ file)
-   #'(file->page (file-name->post-name file)
-                 file)])
+(define (file->page file #:name (name (file-name->post-name file)))
+  (define path (~a (last (explode-path (path-replace-extension file #".html")))))
 
+  (page (list path)
+	(my-content name 
+	  (file->content file))))
 
+(define (file->content file)
+  (dynamic-require file 'content))
 
 (define-syntax-parser file->child-pages
   [(_ file)
