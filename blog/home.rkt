@@ -27,21 +27,11 @@
        @list{
          As a tribute to that @(link-to (lost-library) @b{lost library}), where I spent my early life reading, I've started this blog, where I hope to spend time writing.  
        }
-       }
+    }
 
     (h1 "Recent")
 
-    (row
-      (col-4
-        (post-card (lost-library)))
-      (col-4
-        (post-card (story/meta-story)))
-      (col-4
-        (post-card (teacher-thanks))))
-    
-    (row
-      (col-4
-        (post-card (lang-website))))))
+    (post-card-rows top-posts)))
 
 
 

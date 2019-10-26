@@ -1,6 +1,6 @@
 #lang racket
 
-(provide post-card)
+(provide post-card post-card-rows)
 
 (require website/bootstrap
          (only-in 2htdp/image scale)
@@ -58,7 +58,7 @@
     (card-body
       (card-title 
         (link-to post title))
-      (card-subtitle "1-minute read")
+      (card-subtitle "")
       (p 
         (write-image
           style: (properties width: "30px"
@@ -73,3 +73,18 @@
         (div
           (link-to post "more..."))
         ))))
+
+
+(define (in-threes l)
+  (if (<= (length l) 3)
+   (list l)
+   (cons (take l 3) 
+         (in-threes (drop l 3)))))
+
+(define (post-card-rows posts)
+  (map row 
+    (in-threes 
+      (map (compose col-4 post-card) posts))))
+
+
+

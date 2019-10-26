@@ -1,54 +1,45 @@
 #lang racket
 
 (provide posts
+         top-posts
          lang-website
          lost-library
          story/meta-story
          teacher-thanks)
 
 (require "../lib/main.rkt"
-         (prefix-in teacher-thanks:
-                    "./posts/teacher-thanks.rkt") 
-         (prefix-in story/meta-story:
-                    "./posts/story-meta-story.rkt") 
-         (prefix-in lost-library:
-                    "./posts/lost-library.rkt")
-         (prefix-in lang-website:
-                    "./posts/lang-website.rkt") 
          "./posts/thank-yous/main.rkt")
 
 (define (lang-website)
-  (page posts/lang-website.html
-        (my-content
-          "#lang website"
-          lang-website:content)))
+  (file->page "#lang website"
+              "./posts/lang-website.rkt"))
 
 (define (lost-library)
-  (page posts/lost-library.html
-        (my-content
-          "Lost Library"
-          lost-library:content)))
+  (file->page "./posts/lost-library.rkt"))
 
 (define (story/meta-story)
-  (page posts/story-meta-story.html
-        (my-content
-          "Story/Meta-Story"
-          story/meta-story:content
-          )))
+  (file->page "Story/Meta-Story"
+              "./posts/story-meta-story.rkt"))
 
 (define (teacher-thanks)
-  (page posts/teacher-thanks.html
-        (my-content
-          "Teacher Thank You"
-          teacher-thanks:content)))
+  (file->page "./posts/teacher-thanks.rkt"))
 
-(define posts
+(define (definitions-top)
+  (file->page "./posts/definitions.rkt"))
+
+(define top-posts
   (list
     (lost-library)
     (story/meta-story)
     (teacher-thanks)
     (lang-website)
-    (thank-yous)))
+    (definitions-top)))
+
+(define posts
+  (list
+    top-posts
+    (thank-yous)
+    (file->child-pages "./posts/definitions.rkt")))
 
 
 

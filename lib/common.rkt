@@ -3,7 +3,8 @@
 (provide my-nav 
          my-content
          home-content
-         my-css)
+         my-css
+         clear)
 
 (require website/bootstrap)
 
@@ -14,6 +15,7 @@
     (nav-item 
       (nav-link "/about.html"
                 "About"))))
+
 
 
 (define (my-content title . stuff)
@@ -58,3 +60,7 @@
     (file->string
       (build-path css-path
                   "custom.css"))))
+
+
+(define (clear)
+  (div style: (properties clear: "both")))

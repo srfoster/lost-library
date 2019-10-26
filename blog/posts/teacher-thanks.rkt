@@ -4,6 +4,7 @@
    "./thank-yous/main.rkt"
    2htdp/image)
 
+
 @paras{
 @(preview-img (overlay
                 (text "Gratitude" 50 'black)
@@ -17,26 +18,5 @@ As a teacher, I find myself eternally grateful to my own teachers.  This post is
       (properties clear: "both"))
 
 
-@(row
-   (col-4
-     (post-card 
-       (thank-you/matt-willis)))
-
-   (col-4
-     (post-card 
-       (thank-you/marlena-fecho)))
-
-   (col-4
-     (post-card 
-       (thank-you/kelly-eakin))))
-
-
-  @(row
-     (col-4
-       (post-card 
-         (thank-you/grace-manning)))
-
-     (col-4
-       (post-card 
-          (thank-you/michael-landry))))
+@(post-card-rows (thank-yous))
 }
