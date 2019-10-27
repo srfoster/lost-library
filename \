@@ -4,10 +4,13 @@
 (define-runtime-path here ".")
 
 (define/provide (definition)
-  @div{@b{mind-full-ness} })
+  @div{@b{flu-en-cy} })
 
 @paras{
-  @(definition) 
+  @(preview-img 
+     (circle 40 'solid 'red))
 
-  @(hr)
+  @b{Awareness:}
+
+  @(clear)
 }

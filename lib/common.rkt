@@ -4,7 +4,8 @@
          my-content
          home-content
          my-css
-         clear)
+         clear
+         definition-link)
 
 (require website/bootstrap)
 
@@ -64,3 +65,11 @@
 
 (define (clear)
   (div style: (properties clear: "both")))
+
+
+
+(define (definition-link to)
+  (a href: (~a "/definitions/" (string-replace to " " "-") ".html") 
+     (b to)))
+
+

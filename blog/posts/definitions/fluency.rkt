@@ -4,16 +4,19 @@
 (define-runtime-path here ".")
 
 (define/provide (definition)
-  @div{@b{cod-ing} Any form of writing with the power to cause changes in the world regardless of whether it is read by other minds.})
+  @div{@b{flu-en-cy} })
+
 
 @paras{
-  @(definition) 
+  @(definition)
 
   @(hr)
+  Related terms: @definition-link{writing}, @definition-link{reading}.
 
   @b{See also...}
 
   @(rows-of-three 
      (path->definition-preview (build-path here "writing.rkt"))
-     (path->definition-preview (build-path here "reading.rkt")))
+     (path->definition-preview (build-path here "reading.rkt"))
+)
 }

@@ -1,12 +1,13 @@
 #lang at-exp lost-library/post
 
-(require 2htdp/image)
+(require 2htdp/image racket/runtime-path)
+(define-runtime-path here ".")
+
+(define/provide (definition)
+  @div{@b{a-ware-ness} })
 
 @paras{
-  @(preview-img 
-     (circle 40 'solid 'red))
+  @(definition) 
 
-  @b{Awareness:}
-
-  @(clear)
+  @(hr)
 }

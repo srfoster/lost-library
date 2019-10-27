@@ -1,6 +1,9 @@
 #lang racket
 
-(provide post-card post-card-rows)
+(provide post-card post-card-rows
+         definition-preview-card
+         path->definition-preview
+         rows-of-three)
 
 (require website/bootstrap
          (only-in 2htdp/image scale)
@@ -86,5 +89,38 @@
     (in-threes 
       (map (compose col-4 post-card) posts))))
 
+(define (rows-of-three . things)
+  (map row 
+    (in-threes 
+      (map col-4 (flatten things)))))
+
+
+
+(define (path->definition-preview path)
+  (let() 
+     (define definition (dynamic-require path 'definition))
+     (define word (~a (path-replace-extension (last (explode-path path)) "")))
+
+     (definition-preview-card word 
+       (definition))))
+
+(define (definition-preview-card word blurb)
+ (card 
+    (card-body
+      (p 
+        (write-image
+          style: (properties width: "30px"
+                             float: "left"
+                             margin-right: "5px")
+          (scale 0.25
+                 (book-spine:with-text (string-titlecase word)
+                                       (next-book-spine))))
+
+        blurb
+
+        (div
+          (a href: (~a "/definitions/" word ".html") 
+             "more..."))
+        ))))
 
 
