@@ -30,13 +30,17 @@
 (define (definitions-top)
   (file->page (build-path posts-dir "definitions.rkt")))
 
+(define (blog-with-racket)
+  (file->page (build-path posts-dir "blog-with-racket.rkt")))
+
 (define top-posts
   (list
     (lost-library)
     (story/meta-story)
     (teacher-thanks)
     (lang-website)
-    (definitions-top)))
+    (definitions-top)
+    (blog-with-racket)))
 
 (define posts
   (list
