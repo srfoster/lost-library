@@ -3,6 +3,7 @@
 (define deps '("base" 
                "chess"
                "https://github.com/thoughtstem/website.git"
+               "https://github.com/thoughtstem/website-js.git"
                "https://github.com/srfoster/yin-yang-lang.git"
                "https://github.com/srfoster/book-spines.git"))
 

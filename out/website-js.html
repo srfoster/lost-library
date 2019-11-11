@@ -1,0 +1,492 @@
+<html><head><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css" /><link rel="stylesheet" type="text/css" href="/css/custom.css" /><link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" /></head><body><nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark"><div class="container"><a href="/index.html" class="navbar-brand">Stephen R. Foster</a><ul class="navbar-nav ml-auto"><li class="nav-item"><li class="nav-item"><a class="nav-link" href="/about.html">About</a></li></li></ul></div></nav><div class="container"><div id="main"><h1>Website Js</h1> I'm working on a way to encapsulate HTML, CSS, and JS into reusable components -- much like React.  Here's one now (click it!):<br /><br /> <div><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns2776_main()" id="ns2776_clicker">0</button></div></div><script>
+//<![CDATA[
+window.ns2776_button="ns2776_clicker";
+window.ns2776_count=0;
+window.ns2776_main = function(){
+window.ns2776_inc(1);
+
+}
+
+window.ns2776_inc = function(amount){
+window.ns2776_count  +=  amount 
+ document.getElementById( window.ns2776_button ).innerHTML =  window.ns2776_count;
+ ;
+
+}
+
+
+//]]>
+</script></div><br /><br /> This was defined as follows:<br /><br /> <pre><code>(define (my-clicker)
+   (div
+    (clicker
+     button-primary)))</code></pre><br /><br /> The <code>(clicker ...)</code> part comes from <code>(require website-js/demos/clicker)</code>.   It is (much like a react component) a building-block for other components, which encapsulates both appearance and behaviour in configurable ways.<br /><br /> We can such components building blocks to create new components -- even ones that create multiple instances of the clicker.<br /><br /> <div class="jumbotron"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-danger" onClick="window.ns2777_main()" id="ns2777_clicker">0</button></div></div><script>
+//<![CDATA[
+window.ns2777_button="ns2777_clicker";
+window.ns2777_count=0;
+window.ns2777_main = function(){
+window.ns2777_inc(1);
+
+}
+
+window.ns2777_inc = function(amount){
+window.ns2777_count  +=  amount 
+ document.getElementById( window.ns2777_button ).innerHTML =  window.ns2777_count;
+ ;
+
+}
+
+
+//]]>
+</script><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-success" onClick="window.ns2778_main()" id="ns2778_clicker">0</button></div></div><script>
+//<![CDATA[
+window.ns2778_button="ns2778_clicker";
+window.ns2778_count=0;
+window.ns2778_main = function(){
+window.ns2778_inc(1);
+
+}
+
+window.ns2778_inc = function(amount){
+window.ns2778_count  +=  amount 
+ document.getElementById( window.ns2778_button ).innerHTML =  window.ns2778_count;
+ ;
+
+}
+
+
+//]]>
+</script><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns2779_main()" id="ns2779_clicker">0</button></div></div><script>
+//<![CDATA[
+window.ns2779_button="ns2779_clicker";
+window.ns2779_count=0;
+window.ns2779_main = function(){
+window.ns2779_inc(1);
+
+}
+
+window.ns2779_inc = function(amount){
+window.ns2779_count  +=  amount 
+ document.getElementById( window.ns2779_button ).innerHTML =  window.ns2779_count;
+ ;
+
+}
+
+
+//]]>
+</script></div><br /><br /> This was defined as follows:<br /><br /> <pre><code>(define (color-picker-starter)
+   (jumbotron
+    (clicker
+     button-danger)
+    (clicker
+     button-success)
+    (clicker
+     button-primary)))</code></pre><br /><br /> Or perhaps we want to apply some styling:<br /><br /> <div class="jumbotron"><div class="row"><div class="col-4"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-danger" onClick="window.ns2780_main()" id="ns2780_clicker">0</button></div></div><script>
+//<![CDATA[
+window.ns2780_button="ns2780_clicker";
+window.ns2780_count=0;
+window.ns2780_main = function(){
+window.ns2780_inc(1);
+
+}
+
+window.ns2780_inc = function(amount){
+window.ns2780_count  +=  amount 
+ document.getElementById( window.ns2780_button ).innerHTML =  window.ns2780_count;
+ ;
+
+}
+
+
+//]]>
+</script></div><div class="col-4"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-success" onClick="window.ns2781_main()" id="ns2781_clicker">0</button></div></div><script>
+//<![CDATA[
+window.ns2781_button="ns2781_clicker";
+window.ns2781_count=0;
+window.ns2781_main = function(){
+window.ns2781_inc(1);
+
+}
+
+window.ns2781_inc = function(amount){
+window.ns2781_count  +=  amount 
+ document.getElementById( window.ns2781_button ).innerHTML =  window.ns2781_count;
+ ;
+
+}
+
+
+//]]>
+</script></div><div class="col-4"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns2782_main()" id="ns2782_clicker">0</button></div></div><script>
+//<![CDATA[
+window.ns2782_button="ns2782_clicker";
+window.ns2782_count=0;
+window.ns2782_main = function(){
+window.ns2782_inc(1);
+
+}
+
+window.ns2782_inc = function(amount){
+window.ns2782_count  +=  amount 
+ document.getElementById( window.ns2782_button ).innerHTML =  window.ns2782_count;
+ ;
+
+}
+
+
+//]]>
+</script></div></div></div><br /><br /> This was defined as follows:<br /><br /> <pre><code>(define (color-picker-starter-with-cols)
+   (jumbotron
+    (row
+     (col-4
+      (clicker
+       button-danger))
+     (col-4
+      (clicker
+       button-success))
+     (col-4
+      (clicker
+       button-primary)))))</code></pre><br /><br /> The <code>row</code> and <code>col-4</code> functions come from <code>website/bootstrap</code> -- as does <code>button-primary</code>, <code>button-danger</code>, and <code>button-success</code>.<br /><br /> Cool.  But everyone knows that the hard part of creating a framework of reusable HTML/CSS/JS snippets is handling the JavaScript stuff.  So let's do more of that.<br /><br />Here's one (from <code>(require website-js/demos/color-picker)</code>) that will (slowly) change the background of the jumbotron as you click the different buttons.<br /><br /><div class="jumbotron" id="ns2783_output" style="background-color:rgb(0,0,0);"><div class="row"><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns2808_main()" id="ns2808_clicker">0</button></div></div><script>
+//<![CDATA[
+window.ns2808_button="ns2808_clicker";
+window.ns2808_count=0;
+window.ns2808_main = function(){
+window.ns2808_inc(1);
+
+}
+
+window.ns2808_inc = function(amount){
+window.ns2808_count  +=  amount 
+ document.getElementById( window.ns2808_button ).innerHTML =  window.ns2808_count;
+ window.ns2783_change("red" , window.ns2808_count);
+
+}
+
+
+//]]>
+</script></div><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns2809_main()" id="ns2809_clicker">0</button></div></div><script>
+//<![CDATA[
+window.ns2809_button="ns2809_clicker";
+window.ns2809_count=0;
+window.ns2809_main = function(){
+window.ns2809_inc(1);
+
+}
+
+window.ns2809_inc = function(amount){
+window.ns2809_count  +=  amount 
+ document.getElementById( window.ns2809_button ).innerHTML =  window.ns2809_count;
+ window.ns2783_change("green" , window.ns2809_count);
+
+}
+
+
+//]]>
+</script></div><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns2810_main()" id="ns2810_clicker">0</button></div></div><script>
+//<![CDATA[
+window.ns2810_button="ns2810_clicker";
+window.ns2810_count=0;
+window.ns2810_main = function(){
+window.ns2810_inc(1);
+
+}
+
+window.ns2810_inc = function(amount){
+window.ns2810_count  +=  amount 
+ document.getElementById( window.ns2810_button ).innerHTML =  window.ns2810_count;
+ window.ns2783_change("blue" , window.ns2810_count);
+
+}
+
+
+//]]>
+</script></div></div></div><script>
+//<![CDATA[
+window.ns2783_red=0;
+window.ns2783_green=0;
+window.ns2783_blue=0;
+window.ns2783_output="ns2783_output";
+window.ns2783_change = function(color , amount){
+if( color  == "red"){ 
+ window.ns2783_red  =  amount 
+ } 
+ if( color  == "green"){ 
+ window.ns2783_green  =  amount 
+ } 
+ if( color  == "blue"){ 
+ window.ns2783_blue  =  amount 
+ } 
+
+ var newColor = "rgb(" +  window.ns2783_red  + "," +  window.ns2783_green  + "," +  window.ns2783_blue  + ")"; 
+
+ document.getElementById( window.ns2783_output ).style.backgroundColor = newColor; 
+
+ ;
+
+}
+
+
+//]]>
+</script><br /><br />It's not the best UI.  It takes forever, and you can't decrease the colors.  Better would be with sliders, like this:<br /><br /><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css" /><br /><br /><div class="jumbotron" id="ns2784_output" style="background-color:rgb(0,0,0);"><div class="row"><div class="col"><div><span id="ns2785_output" class="badge badge-secondary">0</span></div><input id="ns2785_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
+//<![CDATA[
+var slider = new Slider(" #ns2785_basic ", { 
+                          tooltip: 'always' 
+                          }).on("slide",(x)=>{ 
+                          document.getElementById( "ns2785_output" ).innerHTML = x 
+                          window.ns2784_change("red" , x) });
+//]]>
+</script></div><div class="col"><div><span id="ns2786_output" class="badge badge-secondary">0</span></div><input id="ns2786_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
+//<![CDATA[
+var slider = new Slider(" #ns2786_basic ", { 
+                          tooltip: 'always' 
+                          }).on("slide",(x)=>{ 
+                          document.getElementById( "ns2786_output" ).innerHTML = x 
+                          window.ns2784_change("green" , x) });
+//]]>
+</script></div><div class="col"><div><span id="ns2787_output" class="badge badge-secondary">0</span></div><input id="ns2787_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
+//<![CDATA[
+var slider = new Slider(" #ns2787_basic ", { 
+                          tooltip: 'always' 
+                          }).on("slide",(x)=>{ 
+                          document.getElementById( "ns2787_output" ).innerHTML = x 
+                          window.ns2784_change("blue" , x) });
+//]]>
+</script></div></div></div><script>
+//<![CDATA[
+window.ns2784_red=0;
+window.ns2784_green=0;
+window.ns2784_blue=0;
+window.ns2784_output="ns2784_output";
+window.ns2784_change = function(color , amount){
+if( color  == "red"){ 
+ window.ns2784_red  =  amount 
+ } 
+ if( color  == "green"){ 
+ window.ns2784_green  =  amount 
+ } 
+ if( color  == "blue"){ 
+ window.ns2784_blue  =  amount 
+ } 
+
+ var newColor = "rgb(" +  window.ns2784_red  + "," +  window.ns2784_green  + "," +  window.ns2784_blue  + ")"; 
+
+ document.getElementById( window.ns2784_output ).style.backgroundColor = newColor; 
+
+ ;
+
+}
+
+
+//]]>
+</script><br /><br />This is accomplished by passing the slider component into the color picker component, overriding its defaults.<br /><br /><pre><code>(define (color-picker-sliders)
+   (color-picker
+    #:r
+    (lambda (cb)
+      (slider
+       #:on-tick
+       cb))
+    #:g
+    (lambda (cb)
+      (slider
+       #:on-tick
+       cb))
+    #:b
+    (lambda (cb)
+      (slider
+       #:on-tick
+       cb))))</code></pre><br /><br /><br />We can use the same trick to build weird (confusing) color pickers if we want:<br /><br /><div class="jumbotron" id="ns2788_output" style="background-color:rgb(0,0,0);"><div class="row"><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-info" onClick="window.ns2789_main()" id="ns2789_clicker">0</button></div></div><script>
+//<![CDATA[
+window.ns2789_button="ns2789_clicker";
+window.ns2789_count=0;
+window.ns2789_main = function(){
+window.ns2789_inc(1);
+
+}
+
+window.ns2789_inc = function(amount){
+window.ns2789_count  +=  amount 
+ document.getElementById( window.ns2789_button ).innerHTML =  window.ns2789_count;
+ window.ns2788_change("red" , window.ns2789_count);
+
+}
+
+
+//]]>
+</script></div><div class="col"><div><span id="ns2790_output" class="badge badge-secondary">0</span></div><input id="ns2790_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
+//<![CDATA[
+var slider = new Slider(" #ns2790_basic ", { 
+                          tooltip: 'always' 
+                          }).on("slide",(x)=>{ 
+                          document.getElementById( "ns2790_output" ).innerHTML = x 
+                          window.ns2788_change("green" , x) });
+//]]>
+</script></div><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-warning" onClick="window.ns2791_main()" id="ns2791_clicker">0</button></div></div><script>
+//<![CDATA[
+window.ns2791_button="ns2791_clicker";
+window.ns2791_count=0;
+window.ns2791_main = function(){
+window.ns2791_inc(1);
+
+}
+
+window.ns2791_inc = function(amount){
+window.ns2791_count  +=  amount 
+ document.getElementById( window.ns2791_button ).innerHTML =  window.ns2791_count;
+ window.ns2788_change("blue" , window.ns2791_count);
+
+}
+
+
+//]]>
+</script></div></div></div><script>
+//<![CDATA[
+window.ns2788_red=0;
+window.ns2788_green=0;
+window.ns2788_blue=0;
+window.ns2788_output="ns2788_output";
+window.ns2788_change = function(color , amount){
+if( color  == "red"){ 
+ window.ns2788_red  =  amount 
+ } 
+ if( color  == "green"){ 
+ window.ns2788_green  =  amount 
+ } 
+ if( color  == "blue"){ 
+ window.ns2788_blue  =  amount 
+ } 
+
+ var newColor = "rgb(" +  window.ns2788_red  + "," +  window.ns2788_green  + "," +  window.ns2788_blue  + ")"; 
+
+ document.getElementById( window.ns2788_output ).style.backgroundColor = newColor; 
+
+ ;
+
+}
+
+
+//]]>
+</script><br /><br /><pre><code>(define (color-picker-weird)
+   (color-picker
+    #:r
+    (lambda (cb)
+      (clicker
+       button-info
+       #:on-click
+       cb))
+    #:g
+    (lambda (cb)
+      (slider
+       #:on-tick
+       cb))
+    #:b
+    (lambda (cb)
+      (clicker
+       button-warning
+       #:on-click
+       cb))))</code></pre><br /><br />I don't think you should build color pickers that way.  I'm just trying to demonstrate the immediate reusability you get from functions that return components.<br /><br />What I <b>do</b> think you should do is make componets that create other components.  This is easy to do, and each one behaves independently (as you would expect a good JS-components framework to do).<br /><br /><div class="card"><button type="button" class="btn btn-primary" onClick="window.ns2792_newPicker()">Click me: I make color pickers appear</button><hr /><div id="ns2792_target"></div></div><script>
+//<![CDATA[
+window.ns2792_targetDiv="ns2792_target";
+window.ns2792_newPicker = function(){
+window.namespace_num = window.namespace_num || 0
+
+window.namespace_num += 1
+
+var newNamespace = "ns0000" + window.namespace_num
+
+var s = "<div class=\"jumbotron\" id=\"ns2793_output\" style=\"background-color:rgb(0,0,0);\"><div class=\"row\"><div class=\"col\"><div class=\"card\"><div class=\"card-body\"><h5 class=\"card-title\">Click Me</h5><button type=\"button\" class=\"btn btn-primary\" onClick=\"window.ns2794_main()\" id=\"ns2794_clicker\">0</button></div></div><script>\n//<![CDATA[\nwindow.ns2794_button=\"ns2794_clicker\";\nwindow.ns2794_count=0;\nwindow.ns2794_main = function(){\nwindow.ns2794_inc(1);\n\n}\n\nwindow.ns2794_inc = function(amount){\nwindow.ns2794_count  +=  amount \n document.getElementById( window.ns2794_button ).innerHTML =  window.ns2794_count;\n window.ns2793_change(\"red\" , window.ns2794_count);\n\n}\n\n\n//]]>\n</scr"+"pt></div><div class=\"col\"><div class=\"card\"><div class=\"card-body\"><h5 class=\"card-title\">Click Me</h5><button type=\"button\" class=\"btn btn-primary\" onClick=\"window.ns2795_main()\" id=\"ns2795_clicker\">0</button></div></div><script>\n//<![CDATA[\nwindow.ns2795_button=\"ns2795_clicker\";\nwindow.ns2795_count=0;\nwindow.ns2795_main = function(){\nwindow.ns2795_inc(1);\n\n}\n\nwindow.ns2795_inc = function(amount){\nwindow.ns2795_count  +=  amount \n document.getElementById( window.ns2795_button ).innerHTML =  window.ns2795_count;\n window.ns2793_change(\"green\" , window.ns2795_count);\n\n}\n\n\n//]]>\n</scr"+"pt></div><div class=\"col\"><div class=\"card\"><div class=\"card-body\"><h5 class=\"card-title\">Click Me</h5><button type=\"button\" class=\"btn btn-primary\" onClick=\"window.ns2796_main()\" id=\"ns2796_clicker\">0</button></div></div><script>\n//<![CDATA[\nwindow.ns2796_button=\"ns2796_clicker\";\nwindow.ns2796_count=0;\nwindow.ns2796_main = function(){\nwindow.ns2796_inc(1);\n\n}\n\nwindow.ns2796_inc = function(amount){\nwindow.ns2796_count  +=  amount \n document.getElementById( window.ns2796_button ).innerHTML =  window.ns2796_count;\n window.ns2793_change(\"blue\" , window.ns2796_count);\n\n}\n\n\n//]]>\n</scr"+"pt></div></div></div>"
+var oldNamespace = s.match(/(ns\d*)/)[0] //Maybe buggy?  Just grabbing the first thing that looks like a namespace.  Maybe that's usally the component's main namespace and not the callback namespaces??
+
+document.getElementById(window.ns2792_targetDiv).innerHTML += s.replace(new RegExp(oldNamespace, "g") , newNamespace)
+
+aScript = document.createElement("script")
+aScript.text = "\n\nwindow.ns2793_red=0;\nwindow.ns2793_green=0;\nwindow.ns2793_blue=0;\nwindow.ns2793_output=\"ns2793_output\";\nwindow.ns2793_change = function(color , amount){\nif( color  == \"red\"){ \n window.ns2793_red  =  amount \n } \n if( color  == \"green\"){ \n window.ns2793_green  =  amount \n } \n if( color  == \"blue\"){ \n window.ns2793_blue  =  amount \n } \n\n var newColor = \"rgb(\" +  window.ns2793_red  + \",\" +  window.ns2793_green  + \",\" +  window.ns2793_blue  + \")\"; \n\n document.getElementById( window.ns2793_output ).style.backgroundColor = newColor; \n\n ;\n\n}\n\n\n\n".replace(new RegExp(oldNamespace, "g") , newNamespace)
+document.getElementById(window.ns2792_targetDiv).appendChild(aScript);
+
+}
+
+
+//]]>
+</script><br /><br /><pre><code>(define (color-picker-maker)
+   (enclose
+    (card
+     (button-primary
+      on-click:
+      (call
+       'newPicker)
+      &quot;Click me: I make color pickers appear&quot;)
+     (hr)
+     (div
+      id:
+      (id
+       'target)))
+    (script
+     ((targetDiv
+       (id
+        'target)))
+     (function
+      (newPicker)
+      (inject-component
+       targetDiv
+       (color-picker))))))</code></pre><br /><br /><div class="card"><div class="card-body"><button type="button" class="btn btn-primary" onClick="window.ns2797_newClicker()">I make clickers</button><span class="badge badge-pill badge-primary" id="ns2797_total"></span><hr /><div class="row" id="ns2797_target"></div></div></div><script>
+//<![CDATA[
+window.ns2797_target="ns2797_target";
+window.ns2797_totalDiv="ns2797_total";
+window.ns2797_total=0;
+window.ns2797_newClicker = function(){
+window.namespace_num = window.namespace_num || 0
+
+window.namespace_num += 1
+
+var newNamespace = "ns0000" + window.namespace_num
+
+var s = "<div class=\"col\"><div class=\"card\"><div class=\"card-body\"><h5 class=\"card-title\">Click Me</h5><button type=\"button\" class=\"btn btn-primary\" onClick=\"window.ns2798_main()\" id=\"ns2798_clicker\">0</button></div></div></div>"
+var oldNamespace = s.match(/(ns\d*)/)[0] //Maybe buggy?  Just grabbing the first thing that looks like a namespace.  Maybe that's usally the component's main namespace and not the callback namespaces??
+
+document.getElementById(window.ns2797_target).innerHTML += s.replace(new RegExp(oldNamespace, "g") , newNamespace)
+
+aScript = document.createElement("script")
+aScript.text = "\n\nwindow.ns2798_button=\"ns2798_clicker\";\nwindow.ns2798_count=0;\nwindow.ns2798_main = function(){\nwindow.ns2798_inc(1);\n\n}\n\nwindow.ns2798_inc = function(amount){\nwindow.ns2798_count  +=  amount \n document.getElementById( window.ns2798_button ).innerHTML =  window.ns2798_count;\n window.ns2797_updateTotal(window.ns2798_count);\n\n}\n\n\n\n".replace(new RegExp(oldNamespace, "g") , newNamespace)
+document.getElementById(window.ns2797_target).appendChild(aScript);
+
+}
+
+window.ns2797_updateTotal = function(){
+window.ns2797_total  += 1 
+ document.getElementById( window.ns2797_totalDiv ).innerHTML = "Total:" +  window.ns2797_total;
+ ;
+
+}
+
+
+//]]>
+</script><br /><br /><div class="card"><div class="card-body"><button type="button" class="btn btn-primary" onClick="window.ns2799_newClicker()">I make clicker-makers</button><span class="badge badge-pill badge-primary" id="ns2799_total"></span><hr /><div class="row" id="ns2799_target"></div></div></div><script>
+//<![CDATA[
+window.ns2799_target="ns2799_target";
+window.ns2799_totalDiv="ns2799_total";
+window.ns2799_total=0;
+window.ns2799_newClicker = function(){
+window.namespace_num = window.namespace_num || 0
+
+window.namespace_num += 1
+
+var newNamespace = "ns0000" + window.namespace_num
+
+var s = "<div class=\"col\"><div class=\"card\"><div class=\"card-body\"><button type=\"button\" class=\"btn btn-primary\" onClick=\"window.ns2800_newClicker()\">I make clickers</button><span class=\"badge badge-pill badge-primary\" id=\"ns2800_total\"></span><hr /><div class=\"row\" id=\"ns2800_target\"></div></div></div></div>"
+var oldNamespace = s.match(/(ns\d*)/)[0] //Maybe buggy?  Just grabbing the first thing that looks like a namespace.  Maybe that's usally the component's main namespace and not the callback namespaces??
+
+document.getElementById(window.ns2799_target).innerHTML += s.replace(new RegExp(oldNamespace, "g") , newNamespace)
+
+aScript = document.createElement("script")
+aScript.text = "\n\nwindow.ns2800_target=\"ns2800_target\";\nwindow.ns2800_totalDiv=\"ns2800_total\";\nwindow.ns2800_total=0;\nwindow.ns2800_newClicker = function(){\nwindow.namespace_num = window.namespace_num || 0\n\nwindow.namespace_num += 1\n\nvar newNamespace = \"ns0000\" + window.namespace_num\n\nvar s = \"<div class=\\\"col\\\"><div class=\\\"card\\\"><div class=\\\"card-body\\\"><h5 class=\\\"card-title\\\">Click Me</h5><button type=\\\"button\\\" class=\\\"btn btn-primary\\\" onClick=\\\"window.ns2801_main()\\\" id=\\\"ns2801_clicker\\\">0</button></div></div></div>\"\nvar oldNamespace = s.match(/(ns\\d*)/)[0] //Maybe buggy?  Just grabbing the first thing that looks like a namespace.  Maybe that's usally the component's main namespace and not the callback namespaces??\n\ndocument.getElementById(window.ns2800_target).innerHTML += s.replace(new RegExp(oldNamespace, \"g\") , newNamespace)\n\naScript = document.createElement(\"script\")\naScript.text = \"\\n\\nwindow.ns2801_button=\\\"ns2801_clicker\\\";\\nwindow.ns2801_count=0;\\nwindow.ns2801_main = function(){\\nwindow.ns2801_inc(1);\\n\\n}\\n\\nwindow.ns2801_inc = function(amount){\\nwindow.ns2801_count  +=  amount \\n document.getElementById( window.ns2801_button ).innerHTML =  window.ns2801_count;\\n window.ns2800_updateTotal(window.ns2801_count);\\n\\n}\\n\\n\\n\\n\".replace(new RegExp(oldNamespace, \"g\") , newNamespace)\ndocument.getElementById(window.ns2800_target).appendChild(aScript);\n\n}\n\nwindow.ns2800_updateTotal = function(){\nwindow.ns2800_total  += 1 \n document.getElementById( window.ns2800_totalDiv ).innerHTML = \"Total:\" +  window.ns2800_total;\n window.ns2799_updateTotal(window.ns2800_total);\n\n}\n\n\n\n".replace(new RegExp(oldNamespace, "g") , newNamespace)
+document.getElementById(window.ns2799_target).appendChild(aScript);
+
+}
+
+window.ns2799_updateTotal = function(){
+window.ns2799_total  += 1 
+ document.getElementById( window.ns2799_totalDiv ).innerHTML = "Total:" +  window.ns2799_total;
+
+}
+
+
+//]]>
+</script></div></div><footer style="text-align:center;"><hr /><p><em>Stephen R. Foster 2019</em></p></footer><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="/js/jquery-3.2.1.slim.min.js"></script><script src="/js/bootstrap.bundle.min.js"></script></body></html>

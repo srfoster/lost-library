@@ -1,5 +1,8 @@
 #lang at-exp lost-library/post
 
+(provide define-example
+         code-demo)
+
 (require syntax/parse/define)
 
 (define examples (hash))

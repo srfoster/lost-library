@@ -33,6 +33,9 @@
 (define (blog-with-racket)
   (file->page (build-path posts-dir "blog-with-racket.rkt")))
 
+(define (website-js)
+  (file->page (build-path posts-dir "website-js.rkt")))
+
 (define top-posts
   (list
     (lost-library)
@@ -40,7 +43,8 @@
     (teacher-thanks)
     (lang-website)
     (definitions-top)
-    (blog-with-racket)))
+    (blog-with-racket)
+    (website-js)))
 
 (define posts
   (list
