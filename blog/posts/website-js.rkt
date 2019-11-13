@@ -11,10 +11,12 @@
     [(_ (name args ...) body ...)
      #'(begin
          (set! examples (hash-set examples 'name '(define (name args ...) body ...)))
-	 (define (name args ...) body ...))]))
+	 (define (name args ...) 
+                    body 
+                    ...))]))
 
 (define (code-demo stuff)
-  (pre (code (substring (pretty-format stuff 1) 1))))
+  (pre (code class: "lang-scheme" (substring (pretty-format stuff 1) 1))))
 
 
 (require website-js/demos/clicker
@@ -61,17 +63,23 @@
   (enclose
     (card
       (button-primary on-click: (call 'newPicker)
-         "Click me: I make color pickers appear")
+         "Click me: I make color pickers appear!")
       (hr)
-      (div id: (id 'target)))
-    (script ([targetDiv (id 'target)])
+      (div id: (id 'target))
+      (template id: (id 'template) 
+         (color-picker-sliders)))
+    (script ([target (id 'target)]
+             [template (id 'template)])
       (function (newPicker)
-         (inject-component targetDiv (color-picker))))))
+         (inject-component template target)))))
 
 @paras{
+
    I'm working on a way to encapsulate HTML, CSS, and JS into reusable components -- much like React.  Here's one now (click it!):
 
    @(my-clicker)
+
+   @(js-runtime)
 
    This was defined as follows:
 

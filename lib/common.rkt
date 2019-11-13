@@ -23,7 +23,7 @@
   (content
     #:head 
     (list 
-      (include-css "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css")
+      (include-css "https://cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/themes/prism.css")
       (include-css (my-css)))
     my-nav 
     (container
@@ -33,8 +33,8 @@
     (footer style: (properties text-align: "center")
             (hr)
             (p (em "Stephen R. Foster 2019")))
-    (include-js "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js")
-    (script "hljs.initHighlightingOnLoad();")))
+    (include-js "https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js")
+    (include-js "https://cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/plugins/autoloader/prism-autoloader.min.js")))
 
 (define (home-content title . stuff)
   (content
