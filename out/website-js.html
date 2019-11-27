@@ -1,22 +1,22 @@
-<html><head><link rel="stylesheet" type="text/css" href="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/themes/prism.css" /><link rel="stylesheet" type="text/css" href="/css/custom.css" /><link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" /></head><body><script src="/js/jquery-3.2.1.slim.min.js"></script><nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark"><a href="/index.html" class="navbar-brand">Stephen R. Foster</a><ul class="navbar-nav ml-auto"><li class="nav-item"><li class="nav-item"><a class="nav-link mr-3" href="/about.html">About</a></li></li></ul></nav><div class="container"><div id="main"><h1>Website Js</h1><br /> I'm working on a way to encapsulate HTML, CSS, and JS into reusable components -- much like React.  Here's one now (click it!):<br /><br /> <div><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns3647_main()" id="ns3647_clicker">0</button></div></div><script>
+<html><head><link rel="stylesheet" type="text/css" href="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/themes/prism.css" /><link rel="stylesheet" type="text/css" href="/css/custom.css" /><link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" /></head><body><script src="/js/jquery-3.2.1.slim.min.js"></script><script src="/js/moment.min.js"></script><nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark"><a href="/index.html" class="navbar-brand">Stephen R. Foster</a><ul class="navbar-nav ml-auto"><li class="nav-item"><li class="nav-item"><a class="nav-link mr-3" href="/about.html">About</a></li></li></ul></nav><div class="container"><div id="main"><h1>Website Js</h1> I'm working on a way to encapsulate HTML, CSS, and JS into reusable components -- much like React.  Here's one now (click it!):<br /><br /> <div><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns4109_main()" id="ns4109_clicker">0</button></div></div><script>
 //<![CDATA[
-window.ns3647_button="ns3647_clicker";
-window.ns3647_count=0;
-window.ns3647_main = function(){
-window.ns3647_inc(1);
+window.ns4109_button="ns4109_clicker";
+window.ns4109_count=0;
+window.ns4109_main = function(){
+window.ns4109_inc(1);
 
 }
 
-window.ns3647_inc = function(amount){
-window.ns3647_count  +=  amount 
- document.getElementById( window.ns3647_button ).innerHTML =  window.ns3647_count;
+window.ns4109_inc = function(amount){
+window.ns4109_count  +=  amount 
+ document.getElementById( window.ns4109_button ).innerHTML =  window.ns4109_count;
  ;
 
 }
 
 
 //]]>
-</script></div><br /><br /> <script>
+</script></div><br /><br /> This was defined as follows:<br /><br /> <script>
 //<![CDATA[
    function replaceAllText(root, find, replace) {
 
@@ -62,57 +62,57 @@ function newNamespaceKeeping(old){
    }
 }
 //]]>
-</script><br /><br /> This was defined as follows:<br /><br /> <pre><code class="lang-scheme">(define (my-clicker)
+</script> <pre><code class="lang-scheme">(define (my-clicker)
    (div
     (clicker
-     button-primary)))</code></pre><br /><br /> The <code>(clicker ...)</code> part comes from <code>(require website-js/demos/clicker)</code>.   It is (much like a react component) a building-block for other components, which encapsulates both appearance and behaviour in configurable ways.<br /><br /> We can such components building blocks to create new components -- even ones that create multiple instances of the clicker.<br /><br /> <div class="jumbotron"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-danger" onClick="window.ns3648_main()" id="ns3648_clicker">0</button></div></div><script>
+     button-primary)))</code></pre><br /><br /> The <code>(clicker ...)</code> part comes from <code>(require website-js/demos/clicker)</code>.   It is (much like a react component) a building-block for other components, which encapsulates both appearance and behaviour in configurable ways.<br /><br /> We can such components building blocks to create new components -- even ones that create multiple instances of the clicker.<br /><br /> <div class="jumbotron"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-danger" onClick="window.ns4110_main()" id="ns4110_clicker">0</button></div></div><script>
 //<![CDATA[
-window.ns3648_button="ns3648_clicker";
-window.ns3648_count=0;
-window.ns3648_main = function(){
-window.ns3648_inc(1);
+window.ns4110_button="ns4110_clicker";
+window.ns4110_count=0;
+window.ns4110_main = function(){
+window.ns4110_inc(1);
 
 }
 
-window.ns3648_inc = function(amount){
-window.ns3648_count  +=  amount 
- document.getElementById( window.ns3648_button ).innerHTML =  window.ns3648_count;
+window.ns4110_inc = function(amount){
+window.ns4110_count  +=  amount 
+ document.getElementById( window.ns4110_button ).innerHTML =  window.ns4110_count;
  ;
 
 }
 
 
 //]]>
-</script><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-success" onClick="window.ns3649_main()" id="ns3649_clicker">0</button></div></div><script>
+</script><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-success" onClick="window.ns4111_main()" id="ns4111_clicker">0</button></div></div><script>
 //<![CDATA[
-window.ns3649_button="ns3649_clicker";
-window.ns3649_count=0;
-window.ns3649_main = function(){
-window.ns3649_inc(1);
+window.ns4111_button="ns4111_clicker";
+window.ns4111_count=0;
+window.ns4111_main = function(){
+window.ns4111_inc(1);
 
 }
 
-window.ns3649_inc = function(amount){
-window.ns3649_count  +=  amount 
- document.getElementById( window.ns3649_button ).innerHTML =  window.ns3649_count;
+window.ns4111_inc = function(amount){
+window.ns4111_count  +=  amount 
+ document.getElementById( window.ns4111_button ).innerHTML =  window.ns4111_count;
  ;
 
 }
 
 
 //]]>
-</script><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns3650_main()" id="ns3650_clicker">0</button></div></div><script>
+</script><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns4112_main()" id="ns4112_clicker">0</button></div></div><script>
 //<![CDATA[
-window.ns3650_button="ns3650_clicker";
-window.ns3650_count=0;
-window.ns3650_main = function(){
-window.ns3650_inc(1);
+window.ns4112_button="ns4112_clicker";
+window.ns4112_count=0;
+window.ns4112_main = function(){
+window.ns4112_inc(1);
 
 }
 
-window.ns3650_inc = function(amount){
-window.ns3650_count  +=  amount 
- document.getElementById( window.ns3650_button ).innerHTML =  window.ns3650_count;
+window.ns4112_inc = function(amount){
+window.ns4112_count  +=  amount 
+ document.getElementById( window.ns4112_button ).innerHTML =  window.ns4112_count;
  ;
 
 }
@@ -126,54 +126,54 @@ window.ns3650_count  +=  amount
     (clicker
      button-success)
     (clicker
-     button-primary)))</code></pre><br /><br /> Or perhaps we want to apply some styling:<br /><br /> <div class="jumbotron"><div class="row"><div class="col-4"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-danger" onClick="window.ns3651_main()" id="ns3651_clicker">0</button></div></div><script>
+     button-primary)))</code></pre><br /><br /> Or perhaps we want to apply some styling:<br /><br /> <div class="jumbotron"><div class="row"><div class="col-4"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-danger" onClick="window.ns4113_main()" id="ns4113_clicker">0</button></div></div><script>
 //<![CDATA[
-window.ns3651_button="ns3651_clicker";
-window.ns3651_count=0;
-window.ns3651_main = function(){
-window.ns3651_inc(1);
+window.ns4113_button="ns4113_clicker";
+window.ns4113_count=0;
+window.ns4113_main = function(){
+window.ns4113_inc(1);
 
 }
 
-window.ns3651_inc = function(amount){
-window.ns3651_count  +=  amount 
- document.getElementById( window.ns3651_button ).innerHTML =  window.ns3651_count;
+window.ns4113_inc = function(amount){
+window.ns4113_count  +=  amount 
+ document.getElementById( window.ns4113_button ).innerHTML =  window.ns4113_count;
  ;
 
 }
 
 
 //]]>
-</script></div><div class="col-4"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-success" onClick="window.ns3652_main()" id="ns3652_clicker">0</button></div></div><script>
+</script></div><div class="col-4"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-success" onClick="window.ns4114_main()" id="ns4114_clicker">0</button></div></div><script>
 //<![CDATA[
-window.ns3652_button="ns3652_clicker";
-window.ns3652_count=0;
-window.ns3652_main = function(){
-window.ns3652_inc(1);
+window.ns4114_button="ns4114_clicker";
+window.ns4114_count=0;
+window.ns4114_main = function(){
+window.ns4114_inc(1);
 
 }
 
-window.ns3652_inc = function(amount){
-window.ns3652_count  +=  amount 
- document.getElementById( window.ns3652_button ).innerHTML =  window.ns3652_count;
+window.ns4114_inc = function(amount){
+window.ns4114_count  +=  amount 
+ document.getElementById( window.ns4114_button ).innerHTML =  window.ns4114_count;
  ;
 
 }
 
 
 //]]>
-</script></div><div class="col-4"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns3653_main()" id="ns3653_clicker">0</button></div></div><script>
+</script></div><div class="col-4"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns4115_main()" id="ns4115_clicker">0</button></div></div><script>
 //<![CDATA[
-window.ns3653_button="ns3653_clicker";
-window.ns3653_count=0;
-window.ns3653_main = function(){
-window.ns3653_inc(1);
+window.ns4115_button="ns4115_clicker";
+window.ns4115_count=0;
+window.ns4115_main = function(){
+window.ns4115_inc(1);
 
 }
 
-window.ns3653_inc = function(amount){
-window.ns3653_count  +=  amount 
- document.getElementById( window.ns3653_button ).innerHTML =  window.ns3653_count;
+window.ns4115_inc = function(amount){
+window.ns4115_count  +=  amount 
+ document.getElementById( window.ns4115_button ).innerHTML =  window.ns4115_count;
  ;
 
 }
@@ -191,55 +191,55 @@ window.ns3653_count  +=  amount
        button-success))
      (col-4
       (clicker
-       button-primary)))))</code></pre><br /><br /> The <code>row</code> and <code>col-4</code> functions come from <code>website/bootstrap</code> -- as does <code>button-primary</code>, <code>button-danger</code>, and <code>button-success</code>.<br /><br /> Cool.  But everyone knows that the hard part of creating a framework of reusable HTML/CSS/JS snippets is handling the JavaScript stuff.  So let's do more of that.<br /><br />Here's one (from <code>(require website-js/demos/color-picker)</code>) that will (slowly) change the background of the jumbotron as you click the different buttons.<br /><br /><div class="jumbotron" id="ns3654_output" style="background-color:rgb(0,0,0);"><div class="row"><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns3679_main()" id="ns3679_clicker">0</button></div></div><script>
+       button-primary)))))</code></pre><br /><br /> The <code>row</code> and <code>col-4</code> functions come from <code>website/bootstrap</code> -- as does <code>button-primary</code>, <code>button-danger</code>, and <code>button-success</code>.<br /><br /> Cool.  But everyone knows that the hard part of creating a framework of reusable HTML/CSS/JS snippets is handling the JavaScript stuff.  So let's do more of that.<br /><br />Here's one (from <code>(require website-js/demos/color-picker)</code>) that will (slowly) change the background of the jumbotron as you click the different buttons.<br /><br /><div class="jumbotron" id="ns4116_output" style="background-color:rgb(0,0,0);"><div class="row"><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns4142_main()" id="ns4142_clicker">0</button></div></div><script>
 //<![CDATA[
-window.ns3679_button="ns3679_clicker";
-window.ns3679_count=0;
-window.ns3679_main = function(){
-window.ns3679_inc(1);
+window.ns4142_button="ns4142_clicker";
+window.ns4142_count=0;
+window.ns4142_main = function(){
+window.ns4142_inc(1);
 
 }
 
-window.ns3679_inc = function(amount){
-window.ns3679_count  +=  amount 
- document.getElementById( window.ns3679_button ).innerHTML =  window.ns3679_count;
- window.ns3654_change("red" , window.ns3679_count);
+window.ns4142_inc = function(amount){
+window.ns4142_count  +=  amount 
+ document.getElementById( window.ns4142_button ).innerHTML =  window.ns4142_count;
+ window.ns4116_change("red" , window.ns4142_count);
 
 }
 
 
 //]]>
-</script></div><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns3680_main()" id="ns3680_clicker">0</button></div></div><script>
+</script></div><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns4143_main()" id="ns4143_clicker">0</button></div></div><script>
 //<![CDATA[
-window.ns3680_button="ns3680_clicker";
-window.ns3680_count=0;
-window.ns3680_main = function(){
-window.ns3680_inc(1);
+window.ns4143_button="ns4143_clicker";
+window.ns4143_count=0;
+window.ns4143_main = function(){
+window.ns4143_inc(1);
 
 }
 
-window.ns3680_inc = function(amount){
-window.ns3680_count  +=  amount 
- document.getElementById( window.ns3680_button ).innerHTML =  window.ns3680_count;
- window.ns3654_change("green" , window.ns3680_count);
+window.ns4143_inc = function(amount){
+window.ns4143_count  +=  amount 
+ document.getElementById( window.ns4143_button ).innerHTML =  window.ns4143_count;
+ window.ns4116_change("green" , window.ns4143_count);
 
 }
 
 
 //]]>
-</script></div><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns3681_main()" id="ns3681_clicker">0</button></div></div><script>
+</script></div><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns4144_main()" id="ns4144_clicker">0</button></div></div><script>
 //<![CDATA[
-window.ns3681_button="ns3681_clicker";
-window.ns3681_count=0;
-window.ns3681_main = function(){
-window.ns3681_inc(1);
+window.ns4144_button="ns4144_clicker";
+window.ns4144_count=0;
+window.ns4144_main = function(){
+window.ns4144_inc(1);
 
 }
 
-window.ns3681_inc = function(amount){
-window.ns3681_count  +=  amount 
- document.getElementById( window.ns3681_button ).innerHTML =  window.ns3681_count;
- window.ns3654_change("blue" , window.ns3681_count);
+window.ns4144_inc = function(amount){
+window.ns4144_count  +=  amount 
+ document.getElementById( window.ns4144_button ).innerHTML =  window.ns4144_count;
+ window.ns4116_change("blue" , window.ns4144_count);
 
 }
 
@@ -247,24 +247,24 @@ window.ns3681_count  +=  amount
 //]]>
 </script></div></div></div><script>
 //<![CDATA[
-window.ns3654_red=0;
-window.ns3654_green=0;
-window.ns3654_blue=0;
-window.ns3654_output="ns3654_output";
-window.ns3654_change = function(color , amount){
+window.ns4116_red=0;
+window.ns4116_green=0;
+window.ns4116_blue=0;
+window.ns4116_output="ns4116_output";
+window.ns4116_change = function(color , amount){
 if( color  == "red"){ 
- window.ns3654_red  =  amount 
+ window.ns4116_red  =  amount 
  } 
  if( color  == "green"){ 
- window.ns3654_green  =  amount 
+ window.ns4116_green  =  amount 
  } 
  if( color  == "blue"){ 
- window.ns3654_blue  =  amount 
+ window.ns4116_blue  =  amount 
  } 
 
- var newColor = "rgb(" +  window.ns3654_red  + "," +  window.ns3654_green  + "," +  window.ns3654_blue  + ")"; 
+ var newColor = "rgb(" +  window.ns4116_red  + "," +  window.ns4116_green  + "," +  window.ns4116_blue  + ")"; 
 
- document.getElementById( window.ns3654_output ).style.backgroundColor = newColor; 
+ document.getElementById( window.ns4116_output ).style.backgroundColor = newColor; 
 
  ;
 
@@ -272,50 +272,50 @@ if( color  == "red"){
 
 
 //]]>
-</script><br /><br />It's not the best UI.  It takes forever, and you can't decrease the colors.  Better would be with sliders, like this:<br /><br /><link rel="stylesheet" type="text/css" href="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css" /><br /><br /><div class="jumbotron" id="ns3655_output" style="background-color:rgb(0,0,0);"><div class="row"><div class="col"><div><span id="ns3656_output" class="badge badge-secondary">0</span></div><input id="ns3656_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
+</script><br /><br />It's not the best UI.  It takes forever, and you can't decrease the colors.  Better would be with sliders, like this:<br /><br /><link rel="stylesheet" type="text/css" href="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css" /><br /><br /><div class="jumbotron" id="ns4117_output" style="background-color:rgb(0,0,0);"><div class="row"><div class="col"><div><span id="ns4118_output" class="badge badge-secondary">0</span></div><input id="ns4118_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
 //<![CDATA[
-var slider = new Slider(" #ns3656_basic ", { 
+var slider = new Slider(" #ns4118_basic ", { 
                           tooltip: 'always' 
                           }).on("slide",(x)=>{ 
-                          document.getElementById( "ns3656_output" ).innerHTML = x 
-                          window.ns3655_change("red" , x) });
+                          document.getElementById( "ns4118_output" ).innerHTML = x 
+                          window.ns4117_change("red" , x) });
 //]]>
-</script></div><div class="col"><div><span id="ns3657_output" class="badge badge-secondary">0</span></div><input id="ns3657_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
+</script></div><div class="col"><div><span id="ns4119_output" class="badge badge-secondary">0</span></div><input id="ns4119_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
 //<![CDATA[
-var slider = new Slider(" #ns3657_basic ", { 
+var slider = new Slider(" #ns4119_basic ", { 
                           tooltip: 'always' 
                           }).on("slide",(x)=>{ 
-                          document.getElementById( "ns3657_output" ).innerHTML = x 
-                          window.ns3655_change("green" , x) });
+                          document.getElementById( "ns4119_output" ).innerHTML = x 
+                          window.ns4117_change("green" , x) });
 //]]>
-</script></div><div class="col"><div><span id="ns3658_output" class="badge badge-secondary">0</span></div><input id="ns3658_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
+</script></div><div class="col"><div><span id="ns4120_output" class="badge badge-secondary">0</span></div><input id="ns4120_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
 //<![CDATA[
-var slider = new Slider(" #ns3658_basic ", { 
+var slider = new Slider(" #ns4120_basic ", { 
                           tooltip: 'always' 
                           }).on("slide",(x)=>{ 
-                          document.getElementById( "ns3658_output" ).innerHTML = x 
-                          window.ns3655_change("blue" , x) });
+                          document.getElementById( "ns4120_output" ).innerHTML = x 
+                          window.ns4117_change("blue" , x) });
 //]]>
 </script></div></div></div><script>
 //<![CDATA[
-window.ns3655_red=0;
-window.ns3655_green=0;
-window.ns3655_blue=0;
-window.ns3655_output="ns3655_output";
-window.ns3655_change = function(color , amount){
+window.ns4117_red=0;
+window.ns4117_green=0;
+window.ns4117_blue=0;
+window.ns4117_output="ns4117_output";
+window.ns4117_change = function(color , amount){
 if( color  == "red"){ 
- window.ns3655_red  =  amount 
+ window.ns4117_red  =  amount 
  } 
  if( color  == "green"){ 
- window.ns3655_green  =  amount 
+ window.ns4117_green  =  amount 
  } 
  if( color  == "blue"){ 
- window.ns3655_blue  =  amount 
+ window.ns4117_blue  =  amount 
  } 
 
- var newColor = "rgb(" +  window.ns3655_red  + "," +  window.ns3655_green  + "," +  window.ns3655_blue  + ")"; 
+ var newColor = "rgb(" +  window.ns4117_red  + "," +  window.ns4117_green  + "," +  window.ns4117_blue  + ")"; 
 
- document.getElementById( window.ns3655_output ).style.backgroundColor = newColor; 
+ document.getElementById( window.ns4117_output ).style.backgroundColor = newColor; 
 
  ;
 
@@ -339,45 +339,45 @@ if( color  == "red"){
     (lambda (cb)
       (slider
        #:on-tick
-       cb))))</code></pre><br /><br /><br />We can use the same trick to build weird (confusing) color pickers if we want:<br /><br /><div class="jumbotron" id="ns3659_output" style="background-color:rgb(0,0,0);"><div class="row"><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-info" onClick="window.ns3660_main()" id="ns3660_clicker">0</button></div></div><script>
+       cb))))</code></pre><br /><br /><br />We can use the same trick to build weird (confusing) color pickers if we want:<br /><br /><div class="jumbotron" id="ns4121_output" style="background-color:rgb(0,0,0);"><div class="row"><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-info" onClick="window.ns4122_main()" id="ns4122_clicker">0</button></div></div><script>
 //<![CDATA[
-window.ns3660_button="ns3660_clicker";
-window.ns3660_count=0;
-window.ns3660_main = function(){
-window.ns3660_inc(1);
+window.ns4122_button="ns4122_clicker";
+window.ns4122_count=0;
+window.ns4122_main = function(){
+window.ns4122_inc(1);
 
 }
 
-window.ns3660_inc = function(amount){
-window.ns3660_count  +=  amount 
- document.getElementById( window.ns3660_button ).innerHTML =  window.ns3660_count;
- window.ns3659_change("red" , window.ns3660_count);
+window.ns4122_inc = function(amount){
+window.ns4122_count  +=  amount 
+ document.getElementById( window.ns4122_button ).innerHTML =  window.ns4122_count;
+ window.ns4121_change("red" , window.ns4122_count);
 
 }
 
 
 //]]>
-</script></div><div class="col"><div><span id="ns3661_output" class="badge badge-secondary">0</span></div><input id="ns3661_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
+</script></div><div class="col"><div><span id="ns4123_output" class="badge badge-secondary">0</span></div><input id="ns4123_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
 //<![CDATA[
-var slider = new Slider(" #ns3661_basic ", { 
+var slider = new Slider(" #ns4123_basic ", { 
                           tooltip: 'always' 
                           }).on("slide",(x)=>{ 
-                          document.getElementById( "ns3661_output" ).innerHTML = x 
-                          window.ns3659_change("green" , x) });
+                          document.getElementById( "ns4123_output" ).innerHTML = x 
+                          window.ns4121_change("green" , x) });
 //]]>
-</script></div><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-warning" onClick="window.ns3662_main()" id="ns3662_clicker">0</button></div></div><script>
+</script></div><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-warning" onClick="window.ns4124_main()" id="ns4124_clicker">0</button></div></div><script>
 //<![CDATA[
-window.ns3662_button="ns3662_clicker";
-window.ns3662_count=0;
-window.ns3662_main = function(){
-window.ns3662_inc(1);
+window.ns4124_button="ns4124_clicker";
+window.ns4124_count=0;
+window.ns4124_main = function(){
+window.ns4124_inc(1);
 
 }
 
-window.ns3662_inc = function(amount){
-window.ns3662_count  +=  amount 
- document.getElementById( window.ns3662_button ).innerHTML =  window.ns3662_count;
- window.ns3659_change("blue" , window.ns3662_count);
+window.ns4124_inc = function(amount){
+window.ns4124_count  +=  amount 
+ document.getElementById( window.ns4124_button ).innerHTML =  window.ns4124_count;
+ window.ns4121_change("blue" , window.ns4124_count);
 
 }
 
@@ -385,24 +385,24 @@ window.ns3662_count  +=  amount
 //]]>
 </script></div></div></div><script>
 //<![CDATA[
-window.ns3659_red=0;
-window.ns3659_green=0;
-window.ns3659_blue=0;
-window.ns3659_output="ns3659_output";
-window.ns3659_change = function(color , amount){
+window.ns4121_red=0;
+window.ns4121_green=0;
+window.ns4121_blue=0;
+window.ns4121_output="ns4121_output";
+window.ns4121_change = function(color , amount){
 if( color  == "red"){ 
- window.ns3659_red  =  amount 
+ window.ns4121_red  =  amount 
  } 
  if( color  == "green"){ 
- window.ns3659_green  =  amount 
+ window.ns4121_green  =  amount 
  } 
  if( color  == "blue"){ 
- window.ns3659_blue  =  amount 
+ window.ns4121_blue  =  amount 
  } 
 
- var newColor = "rgb(" +  window.ns3659_red  + "," +  window.ns3659_green  + "," +  window.ns3659_blue  + ")"; 
+ var newColor = "rgb(" +  window.ns4121_red  + "," +  window.ns4121_green  + "," +  window.ns4121_blue  + ")"; 
 
- document.getElementById( window.ns3659_output ).style.backgroundColor = newColor; 
+ document.getElementById( window.ns4121_output ).style.backgroundColor = newColor; 
 
  ;
 
@@ -428,19 +428,19 @@ if( color  == "red"){
       (clicker
        button-warning
        #:on-click
-       cb))))</code></pre><br /><br />I don't think you should build color pickers that way.  I'm just trying to demonstrate the immediate reusability you get from functions that return components.<br /><br />What I <b>do</b> think you should do is make componets that create other components.  This is easy to do, and each one behaves independently (as you would expect a good JS-components framework to do).<br /><br />Here, for example, is a component that produces clicker components -- as many as you like.  It also regesters a callback with them so that it can keep track of the total number of clicks across all of its child-clickers.<br /><br /><div class="card"><div class="card-body"><button type="button" class="btn btn-primary" onClick="window.ns3663_newClicker()">I make clickers</button><span class="badge badge-pill badge-primary" id="ns3663_total"></span><hr /><div class="row" id="ns3663_target"></div><template id="ns3663_template"><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns3664_main()" id="ns3664_clicker">0</button></div></div></div><script>
+       cb))))</code></pre><br /><br />I don't think you should build color pickers that way.  I'm just trying to demonstrate the immediate reusability you get from functions that return components.<br /><br />What I <b>do</b> think you should do is make componets that create other components.  This is easy to do, and each one behaves independently (as you would expect a good JS-components framework to do).<br /><br />Here, for example, is a component that produces clicker components -- as many as you like.  It also regesters a callback with them so that it can keep track of the total number of clicks across all of its child-clickers.<br /><br /><div class="card"><div class="card-body"><button type="button" class="btn btn-primary" onClick="window.ns4125_newClicker()">I make clickers</button><span class="badge badge-pill badge-primary" id="ns4125_total"></span><hr /><div class="row" id="ns4125_target"></div><template id="ns4125_template"><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns4126_main()" id="ns4126_clicker">0</button></div></div></div><script>
 //<![CDATA[
-window.ns3664_button="ns3664_clicker";
-window.ns3664_count=0;
-window.ns3664_main = function(){
-window.ns3664_inc(1);
+window.ns4126_button="ns4126_clicker";
+window.ns4126_count=0;
+window.ns4126_main = function(){
+window.ns4126_inc(1);
 
 }
 
-window.ns3664_inc = function(amount){
-window.ns3664_count  +=  amount 
- document.getElementById( window.ns3664_button ).innerHTML =  window.ns3664_count;
- window.ns3663_updateTotal(window.ns3664_count);
+window.ns4126_inc = function(amount){
+window.ns4126_count  +=  amount 
+ document.getElementById( window.ns4126_button ).innerHTML =  window.ns4126_count;
+ window.ns4125_updateTotal(window.ns4126_count);
 
 }
 
@@ -448,46 +448,46 @@ window.ns3664_count  +=  amount
 //]]>
 </script></template></div></div><script>
 //<![CDATA[
-window.ns3663_target="ns3663_target";
-window.ns3663_template="ns3663_template";
-window.ns3663_totalDiv="ns3663_total";
-window.ns3663_total=0;
-window.ns3663_newClicker = function(){
-var s = document.getElementById(window.ns3663_template).innerHTML
-var oldNamespace = "ns3663"
+window.ns4125_target="ns4125_target";
+window.ns4125_template="ns4125_template";
+window.ns4125_totalDiv="ns4125_total";
+window.ns4125_total=0;
+window.ns4125_newClicker = function(){
+var s = document.getElementById(window.ns4125_template).innerHTML
+var oldNamespace = "ns4125"
 //var oldNamespace = s.match(/(ns\d*)/)[0]
 
-var content = document.getElementById(window.ns3663_template).content
+var content = document.getElementById(window.ns4125_template).content
 var clonedContent = document.importNode(content, true)
 replaceAllText(clonedContent, /ns\d*/g, newNamespaceKeeping(oldNamespace))
 
-document.getElementById(window.ns3663_target).appendChild(clonedContent)
+document.getElementById(window.ns4125_target).appendChild(clonedContent)
 ;
 
 }
 
-window.ns3663_updateTotal = function(){
-window.ns3663_total  += 1 
- document.getElementById( window.ns3663_totalDiv ).innerHTML = "Total:" +  window.ns3663_total;
+window.ns4125_updateTotal = function(){
+window.ns4125_total  += 1 
+ document.getElementById( window.ns4125_totalDiv ).innerHTML = "Total:" +  window.ns4125_total;
  ;
 
 }
 
 
 //]]>
-</script><br /><br />Here we do the same thing, but now this &quot;meta clicker maker&quot; makes clicker makers, each of which makes clickers, each of which is independntly clickable:<br /><br /><div class="card"><div class="card-body"><button type="button" class="btn btn-primary" onClick="window.ns3665_newClicker()">I make clicker-makers</button><span class="badge badge-pill badge-primary" id="ns3665_total"></span><hr /><div class="row" id="ns3665_target"></div><template id="ns3665_template"><div class="col"><div class="card"><div class="card-body"><button type="button" class="btn btn-primary" onClick="window.ns3666_newClicker()">I make clickers</button><span class="badge badge-pill badge-primary" id="ns3666_total"></span><hr /><div class="row" id="ns3666_target"></div><template id="ns3666_template"><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns3667_main()" id="ns3667_clicker">0</button></div></div></div><script>
+</script><br /><br />Here we do the same thing, but now this &quot;meta clicker maker&quot; makes clicker makers, each of which makes clickers, each of which is independntly clickable:<br /><br /><div class="card"><div class="card-body"><button type="button" class="btn btn-primary" onClick="window.ns4127_newClicker()">I make clicker-makers</button><span class="badge badge-pill badge-primary" id="ns4127_total"></span><hr /><div class="row" id="ns4127_target"></div><template id="ns4127_template"><div class="col"><div class="card"><div class="card-body"><button type="button" class="btn btn-primary" onClick="window.ns4128_newClicker()">I make clickers</button><span class="badge badge-pill badge-primary" id="ns4128_total"></span><hr /><div class="row" id="ns4128_target"></div><template id="ns4128_template"><div class="col"><div class="card"><div class="card-body"><h5 class="card-title">Click Me</h5><button type="button" class="btn btn-primary" onClick="window.ns4129_main()" id="ns4129_clicker">0</button></div></div></div><script>
 //<![CDATA[
-window.ns3667_button="ns3667_clicker";
-window.ns3667_count=0;
-window.ns3667_main = function(){
-window.ns3667_inc(1);
+window.ns4129_button="ns4129_clicker";
+window.ns4129_count=0;
+window.ns4129_main = function(){
+window.ns4129_inc(1);
 
 }
 
-window.ns3667_inc = function(amount){
-window.ns3667_count  +=  amount 
- document.getElementById( window.ns3667_button ).innerHTML =  window.ns3667_count;
- window.ns3666_updateTotal(window.ns3667_count);
+window.ns4129_inc = function(amount){
+window.ns4129_count  +=  amount 
+ document.getElementById( window.ns4129_button ).innerHTML =  window.ns4129_count;
+ window.ns4128_updateTotal(window.ns4129_count);
 
 }
 
@@ -495,28 +495,28 @@ window.ns3667_count  +=  amount
 //]]>
 </script></template></div></div></div><script>
 //<![CDATA[
-window.ns3666_target="ns3666_target";
-window.ns3666_template="ns3666_template";
-window.ns3666_totalDiv="ns3666_total";
-window.ns3666_total=0;
-window.ns3666_newClicker = function(){
-var s = document.getElementById(window.ns3666_template).innerHTML
-var oldNamespace = "ns3666"
+window.ns4128_target="ns4128_target";
+window.ns4128_template="ns4128_template";
+window.ns4128_totalDiv="ns4128_total";
+window.ns4128_total=0;
+window.ns4128_newClicker = function(){
+var s = document.getElementById(window.ns4128_template).innerHTML
+var oldNamespace = "ns4128"
 //var oldNamespace = s.match(/(ns\d*)/)[0]
 
-var content = document.getElementById(window.ns3666_template).content
+var content = document.getElementById(window.ns4128_template).content
 var clonedContent = document.importNode(content, true)
 replaceAllText(clonedContent, /ns\d*/g, newNamespaceKeeping(oldNamespace))
 
-document.getElementById(window.ns3666_target).appendChild(clonedContent)
+document.getElementById(window.ns4128_target).appendChild(clonedContent)
 ;
 
 }
 
-window.ns3666_updateTotal = function(){
-window.ns3666_total  += 1 
- document.getElementById( window.ns3666_totalDiv ).innerHTML = "Total:" +  window.ns3666_total;
- window.ns3665_updateTotal(window.ns3666_total);
+window.ns4128_updateTotal = function(){
+window.ns4128_total  += 1 
+ document.getElementById( window.ns4128_totalDiv ).innerHTML = "Total:" +  window.ns4128_total;
+ window.ns4127_updateTotal(window.ns4128_total);
 
 }
 
@@ -524,76 +524,76 @@ window.ns3666_total  += 1
 //]]>
 </script></template></div></div><script>
 //<![CDATA[
-window.ns3665_target="ns3665_target";
-window.ns3665_template="ns3665_template";
-window.ns3665_totalDiv="ns3665_total";
-window.ns3665_total=0;
-window.ns3665_newClicker = function(){
-var s = document.getElementById(window.ns3665_template).innerHTML
-var oldNamespace = "ns3665"
+window.ns4127_target="ns4127_target";
+window.ns4127_template="ns4127_template";
+window.ns4127_totalDiv="ns4127_total";
+window.ns4127_total=0;
+window.ns4127_newClicker = function(){
+var s = document.getElementById(window.ns4127_template).innerHTML
+var oldNamespace = "ns4127"
 //var oldNamespace = s.match(/(ns\d*)/)[0]
 
-var content = document.getElementById(window.ns3665_template).content
+var content = document.getElementById(window.ns4127_template).content
 var clonedContent = document.importNode(content, true)
 replaceAllText(clonedContent, /ns\d*/g, newNamespaceKeeping(oldNamespace))
 
-document.getElementById(window.ns3665_target).appendChild(clonedContent)
+document.getElementById(window.ns4127_target).appendChild(clonedContent)
 ;
 
 }
 
-window.ns3665_updateTotal = function(){
-window.ns3665_total  += 1 
- document.getElementById( window.ns3665_totalDiv ).innerHTML = "Total:" +  window.ns3665_total;
+window.ns4127_updateTotal = function(){
+window.ns4127_total  += 1 
+ document.getElementById( window.ns4127_totalDiv ).innerHTML = "Total:" +  window.ns4127_total;
 
 }
 
 
 //]]>
-</script><br /><br /><div class="card"><button type="button" class="btn btn-primary" onClick="window.ns3668_newPicker()">Click me: I make color pickers appear!</button><hr /><div id="ns3668_target"></div><template id="ns3668_template"><div class="jumbotron" id="ns3669_output" style="background-color:rgb(0,0,0);"><div class="row"><div class="col"><div><span id="ns3670_output" class="badge badge-secondary">0</span></div><input id="ns3670_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
+</script><br /><br /><div class="card"><button type="button" class="btn btn-primary" onClick="window.ns4130_newPicker()">Click me: I make color pickers appear!</button><hr /><div id="ns4130_target"></div><template id="ns4130_template"><div class="jumbotron" id="ns4131_output" style="background-color:rgb(0,0,0);"><div class="row"><div class="col"><div><span id="ns4132_output" class="badge badge-secondary">0</span></div><input id="ns4132_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
 //<![CDATA[
-var slider = new Slider(" #ns3670_basic ", { 
+var slider = new Slider(" #ns4132_basic ", { 
                           tooltip: 'always' 
                           }).on("slide",(x)=>{ 
-                          document.getElementById( "ns3670_output" ).innerHTML = x 
-                          window.ns3669_change("red" , x) });
+                          document.getElementById( "ns4132_output" ).innerHTML = x 
+                          window.ns4131_change("red" , x) });
 //]]>
-</script></div><div class="col"><div><span id="ns3671_output" class="badge badge-secondary">0</span></div><input id="ns3671_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
+</script></div><div class="col"><div><span id="ns4133_output" class="badge badge-secondary">0</span></div><input id="ns4133_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
 //<![CDATA[
-var slider = new Slider(" #ns3671_basic ", { 
+var slider = new Slider(" #ns4133_basic ", { 
                           tooltip: 'always' 
                           }).on("slide",(x)=>{ 
-                          document.getElementById( "ns3671_output" ).innerHTML = x 
-                          window.ns3669_change("green" , x) });
+                          document.getElementById( "ns4133_output" ).innerHTML = x 
+                          window.ns4131_change("green" , x) });
 //]]>
-</script></div><div class="col"><div><span id="ns3672_output" class="badge badge-secondary">0</span></div><input id="ns3672_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
+</script></div><div class="col"><div><span id="ns4134_output" class="badge badge-secondary">0</span></div><input id="ns4134_basic" type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="0" /><script src="https:/cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script><script>
 //<![CDATA[
-var slider = new Slider(" #ns3672_basic ", { 
+var slider = new Slider(" #ns4134_basic ", { 
                           tooltip: 'always' 
                           }).on("slide",(x)=>{ 
-                          document.getElementById( "ns3672_output" ).innerHTML = x 
-                          window.ns3669_change("blue" , x) });
+                          document.getElementById( "ns4134_output" ).innerHTML = x 
+                          window.ns4131_change("blue" , x) });
 //]]>
 </script></div></div></div><script>
 //<![CDATA[
-window.ns3669_red=0;
-window.ns3669_green=0;
-window.ns3669_blue=0;
-window.ns3669_output="ns3669_output";
-window.ns3669_change = function(color , amount){
+window.ns4131_red=0;
+window.ns4131_green=0;
+window.ns4131_blue=0;
+window.ns4131_output="ns4131_output";
+window.ns4131_change = function(color , amount){
 if( color  == "red"){ 
- window.ns3669_red  =  amount 
+ window.ns4131_red  =  amount 
  } 
  if( color  == "green"){ 
- window.ns3669_green  =  amount 
+ window.ns4131_green  =  amount 
  } 
  if( color  == "blue"){ 
- window.ns3669_blue  =  amount 
+ window.ns4131_blue  =  amount 
  } 
 
- var newColor = "rgb(" +  window.ns3669_red  + "," +  window.ns3669_green  + "," +  window.ns3669_blue  + ")"; 
+ var newColor = "rgb(" +  window.ns4131_red  + "," +  window.ns4131_green  + "," +  window.ns4131_blue  + ")"; 
 
- document.getElementById( window.ns3669_output ).style.backgroundColor = newColor; 
+ document.getElementById( window.ns4131_output ).style.backgroundColor = newColor; 
 
  ;
 
@@ -603,18 +603,18 @@ if( color  == "red"){
 //]]>
 </script></template></div><script>
 //<![CDATA[
-window.ns3668_target="ns3668_target";
-window.ns3668_template="ns3668_template";
-window.ns3668_newPicker = function(){
-var s = document.getElementById(window.ns3668_template).innerHTML
-var oldNamespace = "ns3668"
+window.ns4130_target="ns4130_target";
+window.ns4130_template="ns4130_template";
+window.ns4130_newPicker = function(){
+var s = document.getElementById(window.ns4130_template).innerHTML
+var oldNamespace = "ns4130"
 //var oldNamespace = s.match(/(ns\d*)/)[0]
 
-var content = document.getElementById(window.ns3668_template).content
+var content = document.getElementById(window.ns4130_template).content
 var clonedContent = document.importNode(content, true)
 replaceAllText(clonedContent, /ns\d*/g, newNamespaceKeeping(oldNamespace))
 
-document.getElementById(window.ns3668_target).appendChild(clonedContent)
+document.getElementById(window.ns4130_target).appendChild(clonedContent)
 ;
 
 }
@@ -650,4 +650,10 @@ document.getElementById(window.ns3668_target).appendChild(clonedContent)
       (newPicker)
       (inject-component
        template
-       target)))))</code></pre><br /></div></div><footer style="text-align:center;"><hr /><p><em>Stephen R. Foster 2019</em></p></footer><script src="https:/cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script><script src="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script><script src="/js/bootstrap.bundle.min.js"></script></body></html>
+       target)))))</code></pre><br /></div></div><footer style="text-align:center;"><hr /><p><em>Stephen R. Foster 2019</em></p></footer><script src="https:/cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script><script src="https:/cdn.jsdelivr.net/gh/PrismJS/prism@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script><script src="/js/bootstrap.bundle.min.js"></script><script>
+//<![CDATA[
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+//]]>
+</script><script src="/js/font-awesome.js"></script></body></html>

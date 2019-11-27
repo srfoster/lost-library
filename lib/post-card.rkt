@@ -120,7 +120,6 @@
 
         (div
           (a href: (~a "/definitions/" word ".html") 
-             "more..."))
-        ))))
+             "more..."))))))
 
 

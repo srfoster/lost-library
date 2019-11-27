@@ -16,14 +16,6 @@
       id: "content"
       (blockquote 
         class: "fancy"
-        (img style: 
-             (properties 
-               padding: "10px")
-             align: "right"
-             src: "https://ateacherswrites.files.wordpress.com/2011/05/shelves-and-books.jpg")
-
-        (br)
-        (br)
 
         (map quote-p paras)
 

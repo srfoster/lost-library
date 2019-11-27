@@ -74,16 +74,13 @@
          (inject-component template target)))))
 
 @paras{
-
    I'm working on a way to encapsulate HTML, CSS, and JS into reusable components -- much like React.  Here's one now (click it!):
 
    @(my-clicker)
 
-   @(js-runtime)
-
    This was defined as follows:
 
-   @(code-demo (example 'my-clicker))
+   @(js-runtime) @(code-demo (example 'my-clicker))
 
    The @code{(clicker ...)} part comes from @code{(require website-js/demos/clicker)}.   It is (much like a react component) a building-block for other components, which encapsulates both appearance and behaviour in configurable ways.  
 
